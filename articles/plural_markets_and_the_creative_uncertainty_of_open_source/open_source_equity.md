@@ -57,7 +57,7 @@ We observe that the taxes paid by an individual market participant are a natural
 
 This generalization of quadratic power disarms the Sybil attack by emphasizing the voting power of senior community members — those that have contributed more over time. Yet — in another application of plural ideas — the square root scaling of seniority prevents earlier members from usurping majority power.
 
-More generally, we point out that in the permissionless setting Sybil attacks are not a "weakness" per se, but rather an expression of the mathematical unsoundness of treating all members (of which there can be infinitely many) as unquantifiably equal for purposes of voting.
+More generally, we point out that in the permissionless setting Sybil attacks are not a "weakness" per se, but rather an expression of the mathematical unsoundness of treating all members (of which there can be infinitely many) as unquantifiably equal for purposes of voting. This fact was first identified in the [original Sybil attack paper](https://inciteful.xyz/p/s2id:35516916cd8840566acc05d0226f711bee1b563b).
 
 ## Design
 
@@ -251,3 +251,9 @@ In summary, the attacker is trying to maximize $v=O(1)\sum_i s_{i,x}^{\alpha+\be
 This concludes the proof of our main technical result, which leads us to pick the voting power function
 $$v_{i,x}=\sqrt{s_{i,x}\cdot h_i}$$
 as the only one which is Sybil resistant and plural with respect to both of its inputs: equity ownership $s_{i,x}$ and community contributions in the form of taxes $h_i$.
+
+We must point out that this voting power function also has a caveat. If an attacker $i$ is able to distribute their budget $D$ evenly between $s_{i,x}$ and $h_i$, then their voting power 
+
+$$\sqrt{s_{i,x}\cdot h_i}=\sqrt{\frac{D}{2}\frac{D}{2}}=\frac{D}{2}$$
+
+becomes linear in the budget. This breaks the plurality of the voting mechanism, as it amounts to giving the attacker a one-person-one-vote power (or rather one-dollar-one-vote, in our case). Nevertheless, the idea of basing voting power on two input components has merit, as long as users cannot freely control the relative relationship between the components.
