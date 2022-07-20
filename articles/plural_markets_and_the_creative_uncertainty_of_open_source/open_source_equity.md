@@ -223,12 +223,12 @@ $$\frac{\partial L}{\partial s_{i,x}}=\alpha s_{i,x}^{\alpha-1}h_i^\beta - \lamb
 $$\frac{\partial L}{\partial h_i}=\beta s_{i,x}^\alpha h_i^{\beta-1} - \lambda = 0$$
 $$\frac{\partial L}{\partial \lambda}= \sum_i ps_{i,x}+\sum_i h_i - D = 0$$
 
-The first two equations imply $h_i=p\frac{\alpha}{\beta}\cdot s_{i,x}$.
+The first two equations imply $h_i=p\frac{\beta}{\alpha}\cdot s_{i,x}$.
 
 Using this, we can derive a simpler expression for the voting power of the Sybils:
 
 $$v=\sum_i s_{i,x}^\alpha h_i^\beta 
-     = \left( p\frac{\alpha}{\beta}\right)\sum_i s_{i,x}^{\alpha+\beta}
+     = \left( p\frac{\beta}{\alpha}\right)\sum_i s_{i,x}^{\alpha+\beta}
      = O(1)\sum_i s_{i,x}^{\alpha+\beta}$$
 
 Using the third Lagrangian equation we can also derive the constraint:
