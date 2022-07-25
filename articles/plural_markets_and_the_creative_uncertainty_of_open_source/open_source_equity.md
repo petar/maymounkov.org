@@ -257,3 +257,10 @@ We must point out that this voting power function also has a caveat. If an attac
 $$\sqrt{s_{i,x}\cdot h_i}=\sqrt{\frac{D}{2}\frac{D}{2}}=\frac{D}{2}$$
 
 becomes linear in the budget. This breaks the plurality of the voting mechanism, as it amounts to giving the attacker a one-person-one-vote power (or rather one-dollar-one-vote, in our case). Nevertheless, the idea of basing voting power on two input components has merit, as long as users cannot freely control the relative relationship between the components.
+
+## Some parting words
+
+I've described here a "first-stab" at designing a marketplace for open source financing. The design is far from perfect. Mainly I find it to be a way of highlighting the hard problems:
+- Asynchronous voting is a common practical problem. What are effective arbitrage mechanisms in this setting? 
+- Are there plural mechanisms that are also intrinsically Sybil resilient? What is a good formal model?
+- Are there ways to attack the asynchronous voting process using carefully timed financial operations?
