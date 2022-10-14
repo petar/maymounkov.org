@@ -1,4 +1,4 @@
-# Governance for Git and the Plurality Book Project
+# Protocol Labs partners with the Plurality Book Project to build Governance for Git
 
 We believe that the time is ripe to develop a standardized technology that enables collaborative open source communities to govern themselves in a flexible, transparent, accountable, and verifiable manner.
 
