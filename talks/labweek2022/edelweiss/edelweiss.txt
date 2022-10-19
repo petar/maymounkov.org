@@ -51,7 +51,7 @@ OUR APPROACH
 		- Types have IPLD representations (encode to and decode from IPLD)
 
 	Bindings to programming languages:
-		- Compiler that generates code
+		- Compiler generates code
 		- Simple, language-aware framework for writing code templates (novel)
 
 	Developer features:
@@ -67,10 +67,10 @@ TYPES
 	- Special:
 		Any, Nothing
 	- Composite:
-		Link, List, Map, Structure, Tuple, Inductive (Lean, OCaml)
+		Link, List, Map, Structure, Tuple, Inductive/Enum (Lean, OCaml, Rust)
 	- Functional:
 		Lambda, Service, Method
-	- Combinatorial (Lean, OCaml, Julia):
+	- Predicate (Lean, OCaml, Julia):
 		Singleton, Union
 
 FINE GRAIN INTEROPERABILITY
@@ -84,7 +84,14 @@ TYPES CODIFY PROTOCOL PARSING RULES
 
 XXX
 
-	- Current users: Reframe API, IPFS, DHT Hydra Booster, StoreTheIndex
+	Current users:
+		- Reframe API, IPFS, DHT Hydra Booster, StoreTheIndex, SomeGuy
 
-	- No source syntax yet, build ASTs (planned to be a superset of IPLD schema)
-	- We are hiring a compiler engineer!
+	What's behind us:
+		- High-performance serialization generation in Go
+
+	What's ahead of us:
+		- Source syntax parsing
+		- Prototype a backend for FVM actors
+
+	We are hiring a compiler engineer!
